@@ -1,0 +1,6 @@
+framework module Pods_NightscoutMenu {
+  umbrella header "Pods-NightscoutMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

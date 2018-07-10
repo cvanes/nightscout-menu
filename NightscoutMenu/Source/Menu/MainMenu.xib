@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="5Lz-Y9-rve" customClass="MainMenuController" customModule="NightscoutMenu" customModuleProvider="target">
+            <connections>
+                <outlet property="historyMenu" destination="07C-bN-7sZ" id="Viz-y0-jdO"/>
+                <outlet property="lastUpdatedMenuItem" destination="7R9-lA-8I7" id="iay-lv-BJE"/>
+                <outlet property="notifyHighMenuItem" destination="U28-5Z-9CI" id="H5m-qO-GR2"/>
+                <outlet property="notifyLowMenuItem" destination="rak-6h-OlP" id="X0Y-12-XqC"/>
+                <outlet property="notifyUrgentHighMenuItem" destination="sJG-4j-olf" id="XsE-11-gDB"/>
+                <outlet property="notifyUrgentLowMenuItem" destination="oDH-Ui-4ch" id="FID-5N-G87"/>
+                <outlet property="showDeltaMenuItem" destination="yrj-sd-lXY" id="qIL-nb-6cD"/>
+                <outlet property="showDirectionMenuItem" destination="d05-yu-xXk" id="iNi-Jq-fM0"/>
+                <outlet property="showTimeMenuItem" destination="MXg-nV-KSY" id="ypJ-54-e8g"/>
+                <outlet property="showUnitMenuItem" destination="LDJ-gK-Jee" id="cc5-C5-fdL"/>
+                <outlet property="topMenu" destination="bUt-nu-bxe" id="54m-6p-eZe"/>
+            </connections>
+        </customObject>
+        <menu autoenablesItems="NO" id="bUt-nu-bxe">
+            <items>
+                <menuItem isSeparatorItem="YES" id="Heb-Zf-HPK"/>
+                <menuItem title="Updated Fri 12:18" enabled="NO" id="7R9-lA-8I7">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="History" id="VKl-eg-gcC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" id="07C-bN-7sZ"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="Uff-au-x8Q"/>
+                <menuItem title="Nightscout" enabled="NO" id="aDC-Sk-CQR">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Set URL..." id="DHB-qU-OQd">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="setNightscoutUrl:" target="5Lz-Y9-rve" id="haE-ua-Te2"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Open in Browser" id="NOe-WP-VWO">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openNightscout:" target="5Lz-Y9-rve" id="2Ju-qh-UyK"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="kqT-yL-eAu"/>
+                <menuItem title="Preferences" enabled="NO" id="wpD-uw-m8U">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Display" id="opk-zW-6yB" userLabel="Display">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" id="9xP-a8-zHJ">
+                        <items>
+                            <menuItem title="Show Delta" state="on" id="yrj-sd-lXY">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleShowDelta:" target="5Lz-Y9-rve" id="ntR-fs-UuT"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show Direction" state="on" id="d05-yu-xXk">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleShowDirection:" target="5Lz-Y9-rve" id="75O-P9-3Ht"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show Time" state="on" id="MXg-nV-KSY">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleShowTime:" target="5Lz-Y9-rve" id="Lfx-Ce-our"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show Unit" state="on" id="LDJ-gK-Jee">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleShowUnit:" target="5Lz-Y9-rve" id="dnL-S0-B0i"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Notifications" id="erS-dc-VoB">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Notifications" id="ANs-XY-C14">
+                        <items>
+                            <menuItem title="Urgent High" state="on" id="sJG-4j-olf">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleUrgentHighNotification:" target="5Lz-Y9-rve" id="UIg-7o-llH"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="High " state="on" id="U28-5Z-9CI">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleHighNotification:" target="5Lz-Y9-rve" id="IGD-uS-PoA"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Low" state="on" id="rak-6h-OlP">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleLowNotification:" target="5Lz-Y9-rve" id="abg-Ac-wom"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Urgent Low" state="on" id="oDH-Ui-4ch">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleUrgentLowNotification:" target="5Lz-Y9-rve" id="LE5-ul-uFX"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="T1I-OD-Np0"/>
+                <menuItem title="Quit" keyEquivalent="q" id="3UU-zi-8sV">
+                    <connections>
+                        <action selector="quit:" target="5Lz-Y9-rve" id="But-1P-8I0"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-11" y="115"/>
+        </menu>
+    </objects>
+</document>
